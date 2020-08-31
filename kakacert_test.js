@@ -102,3 +102,34 @@ kakaocertService.getESignResult('020040000001', '020050617035400001',
     }, function(error){
         console.log(error)
     });
+
+
+var requestESign = {
+    CallCenterNum : '1600-8536',
+    Expires_in : 60,
+    ReceiverBirthDay : '19800108',
+    ReceiverHP : '010111222',
+    ReceiverName : '테스트',
+    SubClientID : '',
+    TMSMessage : 'TMSMessage0423',
+    TMSTitle : 'TMSTitle 0423',
+    isAllowSimpleRegistYN : true,
+    isVerifyNameYN : true,
+    Token : 'Token Value 2345',
+    PayLoad : 'Payload123',
+    isAppUseYN : true,
+};
+
+kakaocertService.requestESign('020040000001', requestESign,
+    function(response){
+        console.log(response)
+    }, function(error){
+        console.log(error)
+    });
+
+kakaocertService.getESignResult('020040000001', '020083111121200001', 'abcd',
+    function(response){
+        console.log(response)
+    }, function(error){
+        console.log(error)
+    });
