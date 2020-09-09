@@ -14,9 +14,9 @@ var requestCMS = {
     BankCode : '004',
     CallCenterNum : '1600-8536',
     Expires_in : 60,
-    ReceiverBirthDay : '19900108',
-    ReceiverHP : '01012341234',
-    ReceiverName : '테스트',
+    ReceiverBirthDay : '19800101',
+    ReceiverHP : '010111222',
+    ReceiverName : '홍길동',
     BankAccountName : '예금주명',
     BankAccountNum : '9-4324-5**7-58',
     BankCode : '004',
@@ -36,7 +36,14 @@ kakaocertService.requestCMS('020040000001', requestCMS,
         console.log(error)
     });
 
-kakaocertService.getCMSResult('020040000001', '020050616403400001',
+kakaocertService.getCMSState('020040000001', '020090913390400001',
+    function(response){
+        console.log(response)
+    }, function(error){
+        console.log(error)
+    });
+
+kakaocertService.verifyCMS('020040000001', '020090913390400001',
     function(response){
         console.log(response)
     }, function(error){
@@ -46,9 +53,9 @@ kakaocertService.getCMSResult('020040000001', '020050616403400001',
 var requestVerifyAuth = {
     CallCenterNum : '1600-8536',
     Expires_in : 60,
-    ReceiverBirthDay : '19900108',
-    ReceiverHP : '01012341234',
-    ReceiverName : '테스트',
+    ReceiverBirthDay : '19800101',
+    ReceiverHP : '010111222',
+    ReceiverName : '홍길동',
     SubClientID : '020040000001',
     TMSMessage : 'TMSMessage0423',
     TMSTitle : 'TMSTitle 0423',
@@ -65,8 +72,14 @@ kakaocertService.requestVerifyAuth('020040000001', requestVerifyAuth,
         console.log(error)
     });
 
+kakaocertService.getVerifyAuthState('020040000001', '020090913401100001',
+    function(response){
+        console.log(response)
+    }, function(error){
+        console.log(error)
+    });
 
-kakaocertService.getVerifyAuthResult('020040000001', '020050617020000001',
+kakaocertService.verifyAuth('020040000001', '020090913401100001',
     function(response){
         console.log(response)
     }, function(error){
@@ -74,12 +87,13 @@ kakaocertService.getVerifyAuthResult('020040000001', '020050617020000001',
     });
 
 
+
 var requestESign = {
     CallCenterNum : '1600-8536',
     Expires_in : 60,
-    ReceiverBirthDay : '19900108',
-    ReceiverHP : '01012341234',
-    ReceiverName : '테스트',
+    ReceiverBirthDay : '19800101',
+    ReceiverHP : '010111222',
+    ReceiverName : '홍길동',
     SubClientID : '020040000001',
     TMSMessage : 'TMSMessage0423',
     TMSTitle : 'TMSTitle 0423',
@@ -96,7 +110,14 @@ kakaocertService.requestESign('020040000001', requestESign,
         console.log(error)
     });
 
-kakaocertService.getESignResult('020040000001', '020050617035400001',
+kakaocertService.getESignState('020040000001', '020090913412000001',
+    function(response){
+        console.log(response)
+    }, function(error){
+        console.log(error)
+    });
+
+kakaocertService.verifyESign('020040000001', '020090913412000001',
     function(response){
         console.log(response)
     }, function(error){
@@ -107,9 +128,9 @@ kakaocertService.getESignResult('020040000001', '020050617035400001',
 var requestESign = {
     CallCenterNum : '1600-8536',
     Expires_in : 60,
-    ReceiverBirthDay : '19800108',
+    ReceiverBirthDay : '19800101',
     ReceiverHP : '010111222',
-    ReceiverName : '테스트',
+    ReceiverName : '홍길동',
     SubClientID : '',
     TMSMessage : 'TMSMessage0423',
     TMSTitle : 'TMSTitle 0423',
@@ -127,7 +148,7 @@ kakaocertService.requestESign('020040000001', requestESign,
         console.log(error)
     });
 
-kakaocertService.getESignResult('020040000001', '020083111121200001', 'abcd',
+kakaocertService.getESignState('020040000001', '020083111121200001', 'abcd',
     function(response){
         console.log(response)
     }, function(error){
