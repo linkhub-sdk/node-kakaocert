@@ -3,6 +3,8 @@ var kakaocert = require('./');
 kakaocert.config({
     LinkID :'TESTER',
     SecretKey : 'SwWxqU+0TErBXy/9TVjIPEnI0VTUMMSQZtJf3Ed8q3I=',
+    //AuthURL : 'http://192.168.228:9080',
+    //ServiceURL : 'http://192.168.228:9081',
     defaultErrorHandler :  function(Error) {
         console.log('Error Occur : [' + Error.code + '] ' + Error.message);
     }
@@ -117,7 +119,7 @@ kakaocertService.getESignState('020040000001', '020090913412000001',
         console.log(error)
     });
 
-kakaocertService.verifyESign('020040000001', '020090913412000001',
+kakaocertService.verifyESign('020040000001', '020090913412000001','1234',
     function(response){
         console.log(response)
     }, function(error){
