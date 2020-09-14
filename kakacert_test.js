@@ -3,8 +3,8 @@ var kakaocert = require('./');
 kakaocert.config({
     LinkID :'TESTER',
     SecretKey : 'SwWxqU+0TErBXy/9TVjIPEnI0VTUMMSQZtJf3Ed8q3I=',
-    //AuthURL : 'http://192.168.228:9080',
-    //ServiceURL : 'http://192.168.228:9081',
+    //AuthURL : 'http://192.168.0.228:9080',
+    //ServiceURL : 'http://192.168.0.228:9081',
     defaultErrorHandler :  function(Error) {
         console.log('Error Occur : [' + Error.code + '] ' + Error.message);
     }
