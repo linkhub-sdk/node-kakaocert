@@ -1,5 +1,5 @@
 # node-kakaocert
-kakaocert node.js SDK v2.1.1
+kakaocert node.js SDK v2.2.0
 
 ## Install
 
