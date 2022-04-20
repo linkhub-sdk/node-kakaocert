@@ -1,12 +1,12 @@
 {
   "name": "kakaocert",
-  "version": "2.50.0",
+  "version": "2.51.0",
   "description": "Kakaocert API SDK for node. see www.kakaocert.com",
-  "author": "Jeong Yohan <code@linkhub.co.kr>",
+  "author": "Jeong Yohan <code@linkhubcorp.com>",
   "contributors": [
     {
       "name": "JeongYohan",
-      "email": "code@linkhub.co.kr"
+      "email": "code@linkhubcorp.com"
     }
   ],
   "main": "index.js",
